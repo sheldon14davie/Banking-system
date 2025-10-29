@@ -1,0 +1,9 @@
+Create table Customers(
+Customerid int primary key,
+Customer Name text not null,
+Custemail unique not null,
+DOB date,
+Phone_number int not null,
+Address,
+);
+
