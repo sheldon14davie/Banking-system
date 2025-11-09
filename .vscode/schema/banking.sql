@@ -1,7 +1,7 @@
 Create Database Banking system;
 use Banking system;
-CREATE TABLE customers (
-    customer_id INT PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE Users (
+    user_id INT PRIMARY KEY AUTO_INCREMENT,
     first_name VARCHAR(50) NOT NULL,
     last_name VARCHAR(50) NOT NULL,
     email VARCHAR(100) UNIQUE,
@@ -15,6 +15,7 @@ CREATE TABLE customers (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     INDEX idx_email (email),
     INDEX idx_name (last_name, first_name)
+    Role  {"name": "role", "type": "VARCHAR", "constraints": "('customer','admin')"},
 );
 
 CREATE TABLE accounts (
